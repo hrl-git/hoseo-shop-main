@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:C:\\temp\\hoseo-shop.db;mode=MySQL
+    username: sa
+    password:
+  sql:
+    init:
+      mode: always
+  thymeleaf:
+    cache: false
+  h2:
+    console:
+      enabled: true
+---
+spring:
+  config:
+    activate:
+      on-profile: "test"
+  datasource:
+    url: jdbc:h2:mem:hoseo-shop.db;mode=MySQL
